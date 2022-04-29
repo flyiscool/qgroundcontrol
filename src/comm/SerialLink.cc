@@ -12,11 +12,11 @@
 #include <QSettings>
 #include <QMutexLocker>
 
-#ifdef __android__
-#include "qserialport.h"
-#else
+// #ifdef __android__
+// #include "qserialport.h"
+// #else
 #include <QSerialPort>
-#endif
+// #endif
 
 #include "SerialLink.h"
 #include "QGC.h"

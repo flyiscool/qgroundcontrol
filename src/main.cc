@@ -84,7 +84,8 @@ int WindowsCrtReportHook(int reportType, char* message, int* returnValue)
 #include "PairingManager.h"
 #endif
 #if !defined(NO_SERIAL_LINK)
-#include "qserialport.h"
+// #include "qserialport.h"
+#include <QSerialPort>
 #endif
 
 static jobject _class_loader = nullptr;
@@ -182,7 +183,7 @@ jint JNI_OnLoad(JavaVM* vm, void* reserved)
 #endif
 
  #if !defined(NO_SERIAL_LINK)
-    QSerialPort::setNativeMethods();
+    setNativeMethods();
  #endif
 
     JoystickAndroid::setNativeMethods();

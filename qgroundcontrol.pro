@@ -259,7 +259,7 @@ QT += \
         multimedia
 }
 
-AndroidBuild || iOSBuild {
+iOSBuild {
     # Android and iOS don't unclude these
 } else {
     QT += \
